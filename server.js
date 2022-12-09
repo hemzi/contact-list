@@ -10,7 +10,8 @@ const app = express();
 // middleware
 app.use(express.json());
 
-// contact routes
+// routes
+app.use("/api/users", require("./routes/Users"));
 app.use("/api/contacts", require("./routes/Contacts"));
 
 // * Make sure db is live before bringing server up. I just wanted to test this out with IIFE.
